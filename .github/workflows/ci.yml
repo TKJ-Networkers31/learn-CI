@@ -13,7 +13,7 @@ jobs:
     steps:
 
     - name: take code #mengambil code / clone repo ke vm sementara
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: build image #eksekusi command 
       run: docker build -t webku .
