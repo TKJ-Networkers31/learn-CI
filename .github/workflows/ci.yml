@@ -8,7 +8,7 @@ on:
 
 #tugas
 jobs:
-  build: #nama tugas
+  process-ci: #nama tugas
     runs-on: ubuntu-latest #jalankan di vm sementara (vm github)
 
     - name: take code #mengambil code / clone repo ke vm sementara
