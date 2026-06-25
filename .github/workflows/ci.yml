@@ -3,16 +3,17 @@ name: automation CI #nama ci
 #aktif ketika ada yang push ke branch main
 on:
   push:
-    branch:
+    branches:
       - main
 
 #tugas
 jobs:
   process-ci: #nama tugas
     runs-on: ubuntu-latest #jalankan di vm sementara (vm github)
+    steps:
 
     - name: take code #mengambil code / clone repo ke vm sementara
       uses: actions/checkout@v4
 
     - name: build image #eksekusi command 
-      run: docker buid -t webku .
+      run: docker build -t webku .
