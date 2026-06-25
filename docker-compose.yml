@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    ports:
+      - "${PORT}:80"
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "${PASSWORD}"
+      volumes: mysql_database:/var/lib/mysql
+
+volumes:
+  mysql_database:
