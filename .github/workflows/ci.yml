@@ -11,8 +11,8 @@ jobs:
   build: #nama tugas
     runs-on: ubuntu-latest #jalankan di vm sementara (vm github)
 
-    name: take code #mengambil code / clone repo ke vm sementara
-    uses: actions/checkout@v4
+    - name: take code #mengambil code / clone repo ke vm sementara
+      uses: actions/checkout@v4
 
-    name: build image #eksekusi command 
-    run: docker buid -t webku .
+    - name: build image #eksekusi command 
+      run: docker buid -t webku .
